@@ -17,7 +17,6 @@ BuildRequires:	automake
 BuildRequires:	chmlib-devel
 BuildRequires:	libtool
 BuildRequires:	python-devel >= 2.2.1
-BuildRequires:	rpm-pythonprov
 BuildRequires:	scrollkeeper
 Requires(post):	%{_bindir}/gconftool-2
 Requires(post):	scrollkeeper

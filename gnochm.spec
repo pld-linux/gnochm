@@ -30,7 +30,7 @@ A CHM file viewer for Gnome. Features are:
 - Full text search
 - Bookmarks
 - Support for external ms-its links
-- Configurable support for http links
+- Configurable support for HTTP links
 - Internationalisation
 
 %description -l pl
@@ -38,7 +38,7 @@ Przegl±darka plików CHM dla Gnome charakteryzuj±ca siê:
 - Pe³nym wyszukiwaniem tekstu
 - Zak³adkami
 - Obs³ug± zewnêtrznych powi±zañ ms-its
-- Konfigurowalnym wsparciem dla powi±zañ http
+- Konfigurowalnym wsparciem dla powi±zañ HTTP
 - Obs³ug± jêzyków narodowych
 
 %prep

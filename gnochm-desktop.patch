@@ -1,9 +1,10 @@
 diff -urN gnochm-0.9.3.orig/data/gnochm.desktop.in gnochm-0.9.3/data/gnochm.desktop.in
 --- gnochm-0.9.3.orig/data/gnochm.desktop.in	2004-11-08 19:09:48.660287032 +0100
 +++ gnochm-0.9.3/data/gnochm.desktop.in	2004-11-08 19:10:58.348692784 +0100
-@@ -7,4 +7,4 @@
+@@ -7,4 +7,5 @@
  Terminal=false
  Type=Application
  X-GNOME-DocPath=gnochm/gnochm.xml
 -Categories=Application;Utility;X-Red-Hat-Extra;
 +Categories=GTK;GNOME;Utility;
++MimeType=application/x-chm;

@@ -8,7 +8,6 @@ Group:		Applications/Publishing
 Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
 # Source0-md5:	f5476c21943ad669c62d860cd712487a
 URL:		http://gnochm.sourceforge.net/
-Requires:	python-chm >= 0.8.0
 BuildRequires:	autoconf
 BuildRequires:	automake
 %pyrequires_eq	python
@@ -18,6 +17,11 @@ BuildRequires:	rpm-pythonprov
 Requires(post):	%{_bindir}/gconftool-2
 Requires(post):	scrollkeeper
 Requires(postun):	scrollkeeper
+Requires:	python-chm >= 0.8.0
+Requires:	python-gnome
+Requires:	python-gnome-gconf
+Requires:	python-gnome-gtkhtml >= 2.0
+Requires:	python-gnome-ui
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 

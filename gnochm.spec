@@ -9,10 +9,12 @@ Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
 # Source0-md5:	8b5b8c16337e93366dda6667c11821b2
 Patch0:		%{name}-desktop.patch
 URL:		http://gnochm.sourceforge.net/
+BuildRequires:	GConf2-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
 %pyrequires_eq	python
 BuildRequires:	chmlib-devel
+BuildRequires:	libtool
 BuildRequires:	python-devel >= 2.2.1
 BuildRequires:	rpm-pythonprov
 BuildRequires:	scrollkeeper

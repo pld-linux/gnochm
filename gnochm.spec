@@ -2,7 +2,7 @@ Summary:	A CHM file viewer for Gnome
 Summary(pl):	Przegl±darka plików CHM dla Gnome
 Name:		gnochm
 Version:	0.9.3
-Release:	3
+Release:	4
 License:	GPL
 Group:		Applications/Publishing
 Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
@@ -71,6 +71,15 @@ rm -rf $RPM_BUILD_ROOT
 %post 
 %{_bindir}/scrollkeeper-update
 %gconf_schema_install
+umask 022
+update-mime-database %{_datadir}/mime
+[ ! -x /usr/bin/update-desktop-database ] || /usr/bin/update-desktop-database >/dev/null 2>&1 ||:
+
+%postun
+umask 022
+update-mime-database %{_datadir}/mime
+[ ! -x /usr/bin/update-desktop-database ] || /usr/bin/update-desktop-database >/dev/null 2>&1 ||:
+
 
 %postun -p %{_bindir}/scrollkeeper-update
 

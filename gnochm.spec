@@ -1,12 +1,13 @@
 Summary:	A CHM file viewer for Gnome
 Summary(pl):	Przegl±darka plików CHM dla Gnome
 Name:		gnochm
-Version:	0.9.2
+Version:	0.9.3
 Release:	1
 License:	GPL
 Group:		Applications/Publishing
 Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
-# Source0-md5:	f5476c21943ad669c62d860cd712487a
+# Source0-md5:	8b5b8c16337e93366dda6667c11821b2
+Patch0:		%{name}-desktop.patch
 URL:		http://gnochm.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -43,6 +44,7 @@ Przegl±darka plików CHM dla Gnome charakteryzuj±ca siê:
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 %{__aclocal}

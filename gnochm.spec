@@ -1,13 +1,14 @@
 Summary:	A CHM file viewer for Gnome
 Summary(pl):	Przegl±darka plików CHM dla Gnome
 Name:		gnochm
-Version:	0.9.3
-Release:	4
-License:	GPL
+Version:	0.9.4
+Release:	1
+License:	GPL v2+
 Group:		Applications/Publishing
-Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
-# Source0-md5:	8b5b8c16337e93366dda6667c11821b2
+Source0:	http://dl.sourceforge.net/gnochm/%{name}-%{version}.tar.gz
+# Source0-md5:	4066f9b9d31d2175a926f7e72b01f6eb
 Patch0:		%{name}-desktop.patch
+Patch1:		%{name}-DESTDIR.patch
 URL:		http://gnochm.sourceforge.net/
 BuildRequires:	GConf2-devel
 BuildRequires:	autoconf
@@ -21,7 +22,7 @@ BuildRequires:	scrollkeeper
 Requires(post):	%{_bindir}/gconftool-2
 Requires(post):	scrollkeeper
 Requires(postun):	scrollkeeper
-Requires:	python-chm >= 0.8.0
+Requires:	python-chm >= 0.8.1
 Requires:	python-gnome
 Requires:	python-gnome-gconf
 Requires:	python-gnome-gtkhtml >= 2.0
@@ -48,6 +49,7 @@ Przegl±darka plików CHM dla Gnome charakteryzuj±ca siê:
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
 
 %build
 %{__aclocal}
@@ -92,5 +94,6 @@ update-mime-database %{_datadir}/mime
 %{_datadir}/mime-info/gnochm.*
 %{_datadir}/mime/packages/gnochm.*
 %{_datadir}/application-registry/gnochm.*
-%{_mandir}/man?/*
+%{_mandir}/man1/*
+%lang(it) %{_mandir}/it/man1/*
 %{_sysconfdir}/gconf/schemas/gnochm.schemas

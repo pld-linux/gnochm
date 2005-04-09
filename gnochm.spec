@@ -26,6 +26,7 @@ Requires:	python-gnome
 Requires:	python-gnome-gconf
 Requires:	python-gnome-gtkhtml >= 2.0
 Requires:	python-gnome-ui
+Requires:	python-pygtk-glade
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 

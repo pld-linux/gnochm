@@ -2,7 +2,7 @@ Summary:	A CHM file viewer for Gnome
 Summary(pl):	Przegl±darka plików CHM dla Gnome
 Name:		gnochm
 Version:	0.9.4
-Release:	1
+Release:	2
 License:	GPL v2+
 Group:		Applications/Publishing
 Source0:	http://dl.sourceforge.net/gnochm/%{name}-%{version}.tar.gz
@@ -26,6 +26,7 @@ Requires:	python-gnome
 Requires:	python-gnome-gconf
 Requires:	python-gnome-gtkhtml >= 2.0
 Requires:	python-gnome-ui
+Requires:	python-gnome-vfs >= 2.10.0
 Requires:	python-pygtk-glade
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)

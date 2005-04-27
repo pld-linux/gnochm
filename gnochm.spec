@@ -2,7 +2,7 @@ Summary:	A CHM file viewer for Gnome
 Summary(pl):	Przegl±darka plików CHM dla Gnome
 Name:		gnochm
 Version:	0.9.4
-Release:	2
+Release:	3
 License:	GPL v2+
 Group:		Applications/Publishing
 Source0:	http://dl.sourceforge.net/gnochm/%{name}-%{version}.tar.gz
@@ -17,14 +17,16 @@ BuildRequires:	automake
 BuildRequires:	chmlib-devel
 BuildRequires:	libtool
 BuildRequires:	python-devel >= 2.2.1
+BuildRequires:	rpmbuild(macros) >= 1.197
 BuildRequires:	scrollkeeper
-Requires(post):	%{_bindir}/gconftool-2
-Requires(post):	scrollkeeper
-Requires(postun):	scrollkeeper
+Requires(post,preun):	GConf2
+Requires(post,postun):	desktop-file-utils
+Requires(post,postun):	scrollkeeper
+Requires(post,postun):	shared-mime-info
 Requires:	python-chm >= 0.8.1
 Requires:	python-gnome
 Requires:	python-gnome-gconf
-Requires:	python-gnome-gtkhtml >= 2.0
+Requires:	python-gnome-extras-gtkhtml >= 2.10.0
 Requires:	python-gnome-ui
 Requires:	python-gnome-vfs >= 2.10.0
 Requires:	python-pygtk-glade
@@ -66,23 +68,30 @@ rm -rf $RPM_BUILD_ROOT
 	GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL=1 \
 	SHAREDMIME_TOOL=no
 
+rm -r $RPM_BUILD_ROOT%{_datadir}/{application-registry,mime-info}
+
 %find_lang %{name} --with-gnome
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %post 
+%gconf_schema_install gnochm.schemas
+%scrollkeeper_update_post
+%update_desktop_database_post
 umask 022
-%{_bindir}/scrollkeeper-update
-%gconf_schema_install
 update-mime-database %{_datadir}/mime
-[ ! -x /usr/bin/update-desktop-database ] || /usr/bin/update-desktop-database >/dev/null 2>&1 ||:
+
+%preun
+%gconf_schema_uninstall gnochm.schemas
 
 %postun
-umask 022
-%{_bindir}/scrollkeeper-update
-update-mime-database %{_datadir}/mime
-[ ! -x /usr/bin/update-desktop-database ] || /usr/bin/update-desktop-database >/dev/null 2>&1 ||:
+%scrollkeeper_update_postun
+%update_desktop_database_postun
+if [ $1 = 0 ]; then
+	umask 022
+	update-mime-database %{_datadir}/mime
+fi
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
@@ -92,9 +101,7 @@ update-mime-database %{_datadir}/mime
 %{_datadir}/omf/gnochm
 %{_pixmapsdir}/*
 %{_datadir}/applications/gnochm.desktop
-%{_datadir}/mime-info/gnochm.*
 %{_datadir}/mime/packages/gnochm.*
-%{_datadir}/application-registry/gnochm.*
 %{_mandir}/man1/*
 %lang(it) %{_mandir}/it/man1/*
 %{_sysconfdir}/gconf/schemas/gnochm.schemas

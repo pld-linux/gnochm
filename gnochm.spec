@@ -98,7 +98,7 @@ fi
 %{_datadir}/%{name}
 %{_datadir}/omf/gnochm
 %{_pixmapsdir}/*
-%{_datadir}/applications/gnochm.desktop
+%{_desktopdir}/gnochm.desktop
 %{_datadir}/mime/packages/gnochm.*
 %{_mandir}/man1/*
 %lang(it) %{_mandir}/it/man1/*

@@ -78,7 +78,7 @@ rm -rf $RPM_BUILD_ROOT
 %scrollkeeper_update_post
 %update_desktop_database_post
 umask 022
-update-mime-database %{_datadir}/mime
+update-mime-database %{_datadir}/mime ||:
 
 %preun
 %gconf_schema_uninstall gnochm.schemas

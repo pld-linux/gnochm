@@ -14,8 +14,10 @@ BuildRequires:	autoconf
 BuildRequires:	automake
 %pyrequires_eq	python
 BuildRequires:	chmlib-devel
+BuildRequires:	gettext-devel
 BuildRequires:	libtool
 BuildRequires:	python-devel >= 2.2.1
+BuildRequires:	rpm-pythonprov 
 BuildRequires:	rpmbuild(macros) >= 1.197
 BuildRequires:	scrollkeeper
 Requires(post,preun):	GConf2

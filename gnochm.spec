@@ -1,5 +1,5 @@
 Summary:	A CHM file viewer for Gnome
-Summary(pl):	Przegl±darka plików CHM dla Gnome
+Summary(pl.UTF-8):   PrzeglÄ…darka plikÃ³w CHM dla Gnome
 Name:		gnochm
 Version:	0.9.8
 Release:	2
@@ -42,13 +42,13 @@ A CHM file viewer for Gnome. Features are:
 - Configurable support for HTTP links
 - Internationalisation
 
-%description -l pl
-Przegl±darka plików CHM dla Gnome charakteryzuj±ca siê:
-- Pe³nym wyszukiwaniem tekstu
-- Zak³adkami
-- Obs³ug± zewnêtrznych powi±zañ ms-its
-- Konfigurowalnym wsparciem dla powi±zañ HTTP
-- Obs³ug± jêzyków narodowych
+%description -l pl.UTF-8
+PrzeglÄ…darka plikÃ³w CHM dla Gnome charakteryzujÄ…ca siÄ™:
+- PeÅ‚nym wyszukiwaniem tekstu
+- ZakÅ‚adkami
+- ObsÅ‚ugÄ… zewnÄ™trznych powiÄ…zaÅ„ ms-its
+- Konfigurowalnym wsparciem dla powiÄ…zaÅ„ HTTP
+- ObsÅ‚ugÄ… jÄ™zykÃ³w narodowych
 
 %prep
 %setup -q

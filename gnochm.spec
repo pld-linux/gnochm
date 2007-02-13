@@ -1,5 +1,5 @@
 Summary:	A CHM file viewer for Gnome
-Summary(pl.UTF-8):   Przeglądarka plików CHM dla Gnome
+Summary(pl.UTF-8):	Przeglądarka plików CHM dla Gnome
 Name:		gnochm
 Version:	0.9.8
 Release:	2

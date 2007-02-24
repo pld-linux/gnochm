@@ -102,6 +102,4 @@ fi
 %{_pixmapsdir}/*
 %{_desktopdir}/gnochm.desktop
 %{_datadir}/mime/packages/gnochm.*
-%{_mandir}/man1/*
-%lang(it) %{_mandir}/it/man1/*
 %{_sysconfdir}/gconf/schemas/gnochm.schemas

@@ -1,9 +1,11 @@
---- gnochm-0.9.10/data/gnochm.desktop.in.orig	2007-01-20 00:55:26.000000000 +0100
-+++ gnochm-0.9.10/data/gnochm.desktop.in	2007-08-25 13:42:45.080967313 +0200
+diff -urN gnochm-0.9.10/data/gnochm.desktop.in gnochm-0.9.10.new/data/gnochm.desktop.in
+--- gnochm-0.9.10/data/gnochm.desktop.in	2007-01-20 00:55:26.000000000 +0100
++++ gnochm-0.9.10.new/data/gnochm.desktop.in	2007-09-02 18:46:54.000000000 +0200
 @@ -7,5 +7,5 @@
  Terminal=false
  Type=Application
  X-GNOME-DocPath=gnochm/gnochm.xml
 -Categories=Application;Utility;X-Red-Hat-Extra;
+-MimeType=application/x-chm
 +Categories=GTK;GNOME;Utility;
- MimeType=application/x-chm
++MimeType=application/x-chm;

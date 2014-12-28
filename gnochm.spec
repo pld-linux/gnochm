@@ -14,7 +14,7 @@ BuildRequires:	autoconf
 BuildRequires:	automake
 %pyrequires_eq	python
 BuildRequires:	chmlib-devel
-BuildRequires:	gettext-devel
+BuildRequires:	gettext-tools
 BuildRequires:	libtool
 BuildRequires:	python-devel >= 2.5
 BuildRequires:	rpm-pythonprov 
